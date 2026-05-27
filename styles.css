@@ -1,3 +1,7 @@
+/* ==========================================================================
+   ESTILOS BASE (ORIGINALES)
+   ========================================================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +26,7 @@ nav {
   color: white;
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(10px);
+  z-index: 1000; /* Asegura que el nav quede por encima de todo */
 }
 
 nav ul {
@@ -62,33 +67,28 @@ nav ul a.active::after {
   width: 100%;
 }
 
-
 .logo-container {
-  display: flex; /* Activa Flexbox para alinear en línea */
-  align-items: center; /* Centra verticalmente la imagen y el texto */
-  text-decoration: none; /* Quita el subrayado del enlace */
-  gap: 10px; /* Añade un espacio sutil entre el icono y el texto */
+  display: flex; 
+  align-items: center; 
+  text-decoration: none; 
+  gap: 10px; 
 }
 
 /* Estilos para la imagen del icono */
 .logo-icon {
-  height: 40px; /* Ajusta la altura del icono para que coincida con el texto */
-  width: auto; /* Mantiene la proporción de la imagen */
-  display: block; /* Evita espacios extraños debajo de la imagen */
+  height: 40px; 
+  width: auto; 
+  display: block; 
 }
 
-/* Estilos para el texto del logo (opcional, si quieres más control) */
+/* Estilos para el texto del logo */
 .logo-text {
-  font-family: 'Times New Roman', serif; /* Usando una tipografía elegante como la imagen */
+  font-family: 'Times New Roman', serif; 
   font-size: 24px;
   font-weight: bold;
-  color: white; /* Color del texto */
-  letter-spacing: 1px; /* Un poco de espacio entre letras */
+  color: white; 
+  letter-spacing: 1px; 
 }
-
-
-
-
 
 .logo {
   font-family: 'Playfair Display';
@@ -174,7 +174,6 @@ header {
 .menu {
   padding: 10rem 10%;
   background: #f3eee3;
-  
 }
 
 .menu h2 {
@@ -190,8 +189,7 @@ header {
   gap: 20px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: #7a5c3e; /* tono café */
-
+  color: #7a5c3e; 
 }
 
 .destacado-title::before,
@@ -199,8 +197,8 @@ header {
   content: "";
   flex: 1;
   height: 1px;
-  background-color: #c8a27a; /* línea */
-  max-width: 80px; /* largo de las líneas */
+  background-color: #c8a27a; 
+  max-width: 80px; 
 }
 
 .cards {
@@ -273,4 +271,112 @@ footer {
   color: #ccc;
   font-size: 14px;
   padding-bottom: 15px;
+}
+
+/* ==========================================================================
+   MÓDULO RESPONSIVE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* LAPTOPS / PANTALLAS MEDIANAS (max-width: 1024px) */
+@media (max-width: 1024px) {
+  nav {
+    padding: 20px 40px;
+  }
+  
+  header {
+    padding-left: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 50px; 
+  }
+
+  .about {
+    padding: 60px 5%;
+    gap: 40px;
+  }
+
+  .menu {
+    padding: 6rem 5%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* Reducción a 2 columnas */
+  }
+
+  footer {
+    padding: 40px 5%;
+  }
+}
+
+/* MÓVILES / PANTALLAS PEQUEÑAS (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Solución al Nav en móvil */
+  nav {
+    padding: 15px 20px;
+    flex-direction: column; 
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.85); 
+  }
+
+  nav ul {
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    width: 100%;
+  }
+
+  nav ul a {
+    font-size: 15px;
+  }
+
+  /* Solución al Hero en móvil */
+  header {
+    padding: 130px 20px 40px 20px; /* Evita que el menú vertical pise el texto */
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    min-height: 100vh; 
+  }
+
+  .hero-text h1 {
+    font-size: 34px; 
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    margin: 15px auto; 
+    font-size: 15px;
+  }
+
+  /* Adaptación de Secciones Inferiores */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .about img, 
+  .about-text {
+    width: 100%;
+  }
+
+  .menu {
+    padding: 4rem 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* Reducción a 1 sola columna */
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .container-redes {
+    justify-content: center;
+    margin-left: 0;
+  }
 }
