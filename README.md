@@ -32,9 +32,6 @@ Este tipo de solución es ideal para pequeños negocios que buscan una **presenc
 * **Flexbox & CSS Grid**
   Utilizados para construir layouts flexibles y adaptables a distintas resoluciones.
 
-* **Google Fonts**
-  Implementación de tipografías elegantes (*Playfair Display* y *Inter*) para reforzar la identidad visual.
-
 * **Bootstrap Icons**
   Integración de iconografía moderna para redes sociales.
 
@@ -100,18 +97,6 @@ cd cafe-atelier
 * Abrir `index.html` en el navegador
   o
 * Usar Live Server en VS Code
-
----
-
-## ⚡ ¿Por qué una Single Page?
-
-Se eligió una arquitectura **Single Page** por sus ventajas:
-
-* Navegación rápida sin recargas
-* Mejor experiencia de usuario (UX)
-* Diseño moderno y minimalista
-* Mayor enfoque en conversión (contacto / pedidos)
-* Ideal para negocios gastronómicos y portfolios
 
 ---
 
